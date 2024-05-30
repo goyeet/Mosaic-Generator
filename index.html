@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.2/p5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3-delaunay@6"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+
+  </head>
+  <body>
+    <main class="centered-col">
+      <h1>Mosaic Generator</h1>
+      <p>Insert an image and click generate!</p>
+    </main>
+    <script src="sketch.js"></script>
+    <div class="centered-col controls">
+      <label for="file-upload" class="file-upload-button">
+        Upload Image
+      </label>
+      <input id="file-upload" type="file" class="button"/>
+      <div class="centered-col">
+        <label for="numPoints">Number of Points (Affects number of tiles)</label>
+        <div>
+          <input type="range" id="numPoints" name="numPoints" min="100" max="1500" value="1000">
+          <span id="numPointsValue">1000</span>
+        </div>
+      </div>
+      <button id="generateButton" class="button">Generate</button>
+      <button id="downloadButton" class="button">Download Image</button>
+    </div>
+  </body>
+</html>
